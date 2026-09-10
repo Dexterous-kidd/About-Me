@@ -66,6 +66,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .logo {
@@ -73,6 +74,8 @@ a:hover {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--accent-electric);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .site-nav ul {
@@ -90,7 +93,6 @@ a:hover {
 .site-nav a:hover {
   color: var(--accent-electric);
 }
-
 /* ==========================================================================
    3. HERO / ABOUT SECTION
    ========================================================================== */
@@ -356,6 +358,20 @@ a:hover {
    ========================================================================== */
 
 @media (max-width: 768px) {
+  /* Keep logo and nav side-by-side or cleanly structured */
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .site-nav ul {
+    gap: 0.85rem;
+  }
+
+  .site-nav a {
+    font-size: 0.85rem;
+  }
+
   .hero-container {
     flex-direction: column;
     text-align: center;
@@ -373,14 +389,5 @@ a:hover {
 
   .section {
     text-align: center;
-  }
-
-  .header-container {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .site-nav ul {
-    gap: 1rem;
   }
 }
